@@ -1,0 +1,8 @@
+<div d-update class="cover center" style="position: relative">
+    <div #active class="active _1"></div>
+    {{this.lang.draw((x,i) => (
+        `<div class="item_lang center _${i+1}" onclick="this.select('${i+1}')">
+            <p>${x}</p>
+        </div>`
+    ))}}
+</div>

@@ -1,0 +1,124 @@
+.grid {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    .grid_item {
+        width: 50%;
+        margin: 0;
+        terminal {
+            margin: 0 !important;
+        }
+    }
+    @if x <= 1300px {
+        &{
+            flex-direction: column;
+        }
+        .grid_item {
+            width: 100%;
+            margin: 0 !important;
+            margin-bottom: 20px !important;
+        }
+    }
+}
+.grid_item:nth-child(1){
+    margin-right: 15px;
+}
+.grid_item:nth-child(2){
+    margin-left: 15px;
+}
+
+@if x <= 1200px {
+    sidebar {
+        position: fixed !important;
+        z-index: 22;
+        left: -300px !important;
+    }
+    sidebar.open {
+        left: 0 !important;
+    }
+    app {
+        padding-left: 0 !important;
+        #header {
+            display: block !important;
+        }
+        #content {
+            padding: 0 !important;
+            padding-top: 60px !important;
+            .main[cap-id] {
+                padding: 7px !important;
+            }
+            .card.lab {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+}
+@if y <= 800px {
+    .card.lab {
+        height: 700px !important;
+    }
+}
+@if y <= 750px {
+    .card.lab {
+        height: 650px !important;
+    }
+}
+@if y <= 650px {
+    .card.lab {
+        height: 550px !important;
+    }
+}
+
+// CODE
+
+.codeflask__textarea {
+    background-color: #343842;
+    caret-color: #56b5c2 !important;
+}
+.codeflask {
+    font-family: unset; 
+    background-color: #343842;
+    color: #aab1bf !important;
+    font-size: $fsize;
+    .token.punctuation { color: #aab1bf !important; }
+    .token.keyword { color: #c578dd !important; }
+    .token.operator { color: #56b5c2 !important; }
+    .token.string { color: #97c279 !important; }
+    .token.comment { color: #9badb7; }
+    .token.function { color: #61afef !important; }
+    .token.boolean { color: #d19965 !important; }
+    .token.number { color: #d19965 !important; }
+    .token.selector { color: #d19965 !important; }
+    .token.property { color: #56b5c2 !important; }
+    .token.tag { color: #df6b75 !important; }
+    .token.attr-name { color: #d19965 !important; }
+    .token.attr-value { color: #97c279 !important; }
+    .codeflask--has-line-numbers:before {
+        background: #2d303a !important;
+        z-index: 3 !important;
+    }
+    * {
+        font-family: unset !important;
+        font-size: $fsize;
+    }
+    textarea {
+        color: transparent;
+        font-size: $fsize;
+    }
+    pre {
+        width: auto !important;
+    }
+    .codeflask__lines__line {
+        background: #2d303a;
+    }
+}
+.codeflask__lines {
+    background-color: #2d303a;
+    z-index: 4 !important;
+    padding-left: 0 !important;
+}
+.codeflask.codeflask--has-line-numbers:before {
+    background: #2d303a !important;
+}
+

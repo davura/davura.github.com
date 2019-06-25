@@ -1,0 +1,80 @@
+<div class="card">
+    <h1 class="title">{{D.lang.client}}</h1>
+    {{D.lang.client_1}}
+</div>
+
+<div class="grid" site="new">
+    <div class="card grid_item">
+        <h1 class="title"> NEW (n) </h1>
+        {{D.lang.client_2}}
+        <br>
+        <h2 class="title"> {{D.lang.structure}} </h2>
+        <tree data="
+            <div class='dir'>
+                <p>dmodules</p>
+                <div class='dir'>
+                    <p>app</p>
+                    <label> app.js </label>
+                    <label> app.html </label>
+                    <label> app.scss </label>
+                </div>
+            </div>
+            <label>index.html</label>
+            <label>davura.min.js</label>
+            <label>style.scss</label>
+        "></tree>
+    </div>
+    <terminal class="grid_item" data="[
+        '<b>davura</b> new projectname'
+    ]"></terminal>
+</div>
+
+<div class="grid" site="add">
+    <div class="card grid_item">
+        <h1 class="title">ADD (a)</h1>
+        {{D.lang.client_3}}
+    </div>
+    <terminal class="grid_item" data="[
+        '<b>davura</b> add sidebar'
+    ]"></terminal>
+</div>
+
+<div class="grid" site="remove">
+        <div class="card grid_item">
+            <h1 class="title">REMOVE (rm)</h1>
+            {{D.lang.client_4}}
+        </div>
+        <terminal class="grid_item" data="[
+            '<b>davura</b> remove sidebar'
+        ]"></terminal>
+</div>
+
+<div class="grid" site="rename">
+        <div class="card grid_item">
+            <h1 class="title">RENAME (r)</h1>
+            {{D.lang.client_5}}
+        </div>
+        <terminal class="grid_item" data="[
+            '<b>davura</b> rename oldname newname'
+        ]"></terminal>
+</div>
+
+<div class="grid" site="server">
+        <div class="card grid_item">
+            <h1 class="title">SERVER</h1>
+            {{D.lang.client_6}}
+        </div>
+        <terminal class="grid_item" data="[
+            '<b>davura</b> server'
+        ]"></terminal>
+</div>
+
+<div class="grid" site="compile">
+        <div class="card grid_item">
+            <h1 class="title">COMPILE</h1>
+            {{D.lang.client_7}}
+        </div>
+        <terminal class="grid_item" data="[
+            '<b>davura</b> compile'
+        ]"></terminal>
+</div>

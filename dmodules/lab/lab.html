@@ -1,0 +1,81 @@
+<div class="wrap_add cover center" #wrap_add>
+    <div class="add_cap window" #window_add>
+        <div class="add_title">
+            ADD CAPSULA
+        </div>
+        <div class="add_content">
+            <input type="text" placeholder="NAME" value="this.add" #input_add onkeypress="event.key === 'Enter' && this.add_cap()">
+        </div>
+        <div class="buttons center">
+            <button class="btn cancel" onclick="this.close_add()">cancel</button>
+            <button class="btn" onclick="this.add_cap()">add</button>
+        </div>
+    </div>
+    <div class="rename_cap window" #window_rename>
+        <div class="add_title">
+            RENAME CAPSULA
+        </div>
+        <h3>Rename {{this.current}} for:</h3>
+        <input type="text" placeholder="NAME" value="this.new_name" #input_rename onkeypress="event.key === 'Enter' && this.rename()">
+        <div class="buttons center">
+            <button class="btn cancel" onclick="this.close_rename()">cancel</button>
+            <button class="btn" onclick="this.rename()">rename</button>
+        </div>
+    </div>
+</div>
+
+<div class="wrap_index cover center" #wrap_index>
+    <div class="window" #window_index>
+        <div class="cover">
+            <pre class="cover">
+                <code #code></code>
+            </pre>
+        </div>
+        <div class="buttons">
+            <button class="btn" onclick="this.close_index()">close</button>
+        </div>
+    </div>
+</div>
+
+<div class="lab_wrap" #wrap>
+    <div class="lab_sidebar" #lab_sidebar>
+        <div class="cover" d-for="x in this.sidebar">
+            <div class="item" name="{{x}}" onclick="this.open(this)">
+                {{x}}
+            </div>
+        </div>
+        <div class="options">
+            <div class="wrap_options cover center">
+                <div class="index center" onclick="this.open_index()">
+                    show index.html
+                </div>
+                <div class="opt center remove" onclick="this.remove();">
+                    <div></div>
+                </div>
+                <div class="opt center edit" onclick="this.show_rename();">
+                    <div></div>
+                </div>
+                <div class="opt center add" onclick="this.show_add()">
+                    <div class="cover"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lab_content" #content>
+        <div class="lab_header">
+            <div class="menu" onclick="this.open_menu()">
+                <div class="cover"></div>
+            </div>
+            <div class="view view_html" type="template" onclick="this.select_tab(this);" #viewhtml> HTML </div>
+            <div class="view view_js" type="js" onclick="this.select_tab(this);"> JS </div>
+            <div class="view view_scss" type="style" onclick="this.select_tab(this);"> SCSS </div>
+        </div>
+        <div class="section s_html" type="template" #ehtml></div>
+        <div class="section s_scss" type="style" #escss></div>
+        <div class="section s_js" type="js" #ejs></div>
+
+        <div class="section s_result">
+            <iframe #iframe src="./lab.html"></iframe>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+this {
+    p {
+        margin: 0;
+    }
+    .tree .dir {
+        margin-left: 0;
+    }
+    .dir {
+        border-left-style: solid;
+        border-left-color: var(--c4);
+        .dir {
+            margin-left: 30px;
+            margin-bottom: 5px;
+        }
+        p {
+            padding-left: 10px;
+            color: var(--c4);
+            width: auto;
+            font-weight: 600;
+            padding-bottom: 5px;
+        }
+    }
+    label {
+        display: block;
+        padding: 0;
+        padding-bottom: 5px;
+        color: var(--t1);
+    }
+    .dir label {
+        padding-left: 30px;
+    }
+}

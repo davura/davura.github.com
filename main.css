@@ -1,0 +1,234 @@
+html,body{height: 100%;width: 100%;margin: 0;}
+*{
+    font-family:sans-serif;
+}
+p,h1,h2,h3,h4,h5 {
+    color: #424242
+}
+:root {
+    --c1: #fdfdfd;
+    --c2: #e9edf8;
+    --c3: linear-gradient(70deg, #9293ed, #6c6ed8);
+    --c4: #9293ed;
+    --c5: #da8d6e;
+    --c6: #e2ab95;
+    --c7: #bcbcc8;
+    --t1: #92919c;
+    --t2: #26235b;
+    --g1: linear-gradient(70deg, #9293ed, #6c6ed8);
+    --g2: linear-gradient(70deg, var(--c6), var(--c5));
+    --shadow1: 0 0 13px rgba(0, 0, 0, 0.3);
+    --shadow2: 0 0 43px 0px rgba(82, 82, 125, 0.12);
+    --shadow3: 0 0 15px 3px rgba(216, 212, 236, 0.40);
+    --scroll: #a9a9da;
+    --scroll2: #d8d8e2;
+    --sidebar-width: 300px;
+}
+::-webkit-scrollbar{
+    width: 7px;
+    height: 5px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    height: 5px;
+    background-color: var(--scroll)
+}
+sidebar .sidebar::-webkit-scrollbar{
+    width: 7px;
+    height: 5px;
+    background-color: transparent;
+}
+sidebar .sidebar::-webkit-scrollbar-thumb{
+    height: 5px;
+    background-color: var(--scroll2);
+}
+lab .section textarea::-webkit-scrollbar{
+    width: 7px;
+    height: 5px;
+    background-color: transparent;
+}
+lab .section textarea::-webkit-scrollbar-thumb{
+    height: 5px;
+    background-color: #878794;
+}
+a {
+    text-decoration: none;
+}
+.cover {
+    width: 100%;
+    height: 100%;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center.y {
+    flex-direction: column;
+}
+.center.w {
+    flex-wrap: wrap;
+}
+#content .main[cap-id] {
+    padding: 30px;
+    width: 100%; 
+    height: 100%;
+}
+.card {
+    background: white;
+    padding: 30px;
+    box-shadow: var(--shadow2);
+    border-radius: 5px;
+    color: #555475;
+    margin-bottom: 30px;
+}
+.card, terminal {
+    animation-name: zoomIn;
+    -webkit-animation-duration: 400ms;
+    animation-duration: 400ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.card .title {
+    color: #26235b;
+}
+.card p {
+    color: #555475;
+    font-size: 1.1em;
+    letter-spacing: 0.008em;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+.card a {
+    color: var(--c5);
+    border-bottom-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+}
+.card.code {
+    padding: 0;
+    background-color: #282c34;
+    padding-right: 30px;
+    overflow: hidden;
+    
+}
+.card.lab {
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+    height: 800px;
+    overflow: hidden;
+}
+.card.lab lab {
+    box-shadow: var(--shadow2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+.card.lab .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    height: 100px;
+    margin: 0;
+}
+.card.code pre {
+    margin: 0;
+    padding-bottom: 50px !important;
+}
+.grid_item.code pre {
+    height: 100%;;
+}
+.card.code code {
+    font-size: 1.1em;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+}
+i {
+    text-decoration: none;
+    font-family: consolas;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+    font-style: normal;
+    background-color: rgba(115, 117, 220, 0.2);
+}
+a[route] {
+    border-bottom-style: solid;
+}
+ul {
+    font-size: 1.2em;
+}
+ul li {
+    margin-bottom: 8px;
+}
+.main.animated[cap-id] {
+    animation-duration: 220ms;
+}
+
+textarea,
+pre {
+    -moz-tab-size : 4 !important;
+      -o-tab-size : 4 !important;
+         tab-size : 4 !important;
+}
+
+*::selection{
+    color: white;
+    background-color: var(--c4);
+}
+input {
+    border-radius: 3px;
+    border-style: solid;
+    outline-color: transparent;
+    border-color: #c2c2d4;
+    height: 33px;
+    padding-left: 10px;
+    color: var(--t1);
+    font-size: 1em;
+}
+input::placeholder {
+    color:  #c2c2d4;;
+}
+.btn {
+    background-image: var(--g1);
+    border-style: none;
+    height: 40px;
+    border-radius: 4px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 90px;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 5px;
+    transition: all .3s ease;
+    outline-color: unset;
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 0 22px 15px -15px rgba(0, 0, 0, 0.22);
+    transform: translateY(1px);
+}
+.btn.cancel {
+    background-image: var(--g2);
+}
+.card .divider {
+    height: 2px;
+    width: 100%;
+    background-color: #e0e1f8;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#wall {
+    background-image: url(img/beach-boat-colorful-33545.jpg);
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+#opacity {
+    position: absolute;
+    background-image: linear-gradient(157deg,rgba(103, 87, 74, 0.77),rgba(51, 42, 46, 0.57), rgba(58, 59, 86, 0.61))
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LAB</title>
+    <link rel="stylesheet" href="./highlightjs/styles/atom-one-dark.css">
+    <style>
+        html,body{height: 100%;width: 100%;margin: 0;}
+        *, *:before, *:after{-webkit-box-sizing: inherit;box-sizing: inherit;}
+        html{-webkit-box-sizing: border-box;box-sizing: border-box;}
+        div, *[davu-id]{display:block;}
+        *{font-family:sans-serif;}
+        ::-webkit-scrollbar{width: 7px;height: 5px;background-color: transparent;}
+        ::-webkit-scrollbar-thumb{height: 5px;background-color: #d8d8e2;}
+    </style>
+</head>
+<body>
+    <app #app></app>
+    <script src="./highlightjs/highlight.pack.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/davura/davura/dist/davura.min.js"></script>
+    <script>
+        function __load(data) {
+            var list = [];
+            for( var key in data) { 
+                var s = data[key];
+                var d = eval(s.js);
+                d.template = d.template ? s.template : "";
+                d.style = d.style ? s.style : "";
+                d.el = key;
+                list.push(d);
+            }
+            D(list);
+        }
+    </script>
+</body>
+</html>

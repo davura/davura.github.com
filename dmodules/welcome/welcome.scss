@@ -1,0 +1,61 @@
+$titleheight: 80px;
+this {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .welcome {
+        width: 90%;
+        height: 90%;
+        max-width: 500px;
+        max-height: 400px;
+        background-color: white;
+        border-radius: 4px;
+        padding-top: $titleheight;
+        position: relative;
+        padding-bottom: $titleheight;
+        box-shadow: var(--shadow2);
+        animation-duration: 300ms;
+        .title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: $titleheight;
+            width: 100%;
+            p {
+                margin: 0;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                color: #424242;
+                @if x <= 450 {
+                    & {
+                        font-size: 1.2em;
+                    }
+                }
+                @if x <= 340 {
+                    & {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+        .item {
+            padding: 30px;
+            cursor: pointer;
+            transition: all ease 300ms;
+            &:hover {
+                transform: scale(1.1);
+            }
+            p {
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 0.06em
+            }
+            img {
+                width: 100px;
+            }
+        }
+    }
+}

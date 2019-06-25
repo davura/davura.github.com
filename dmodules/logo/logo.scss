@@ -1,0 +1,120 @@
+this {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    .cls-2 {  
+        stroke-width: 3px;
+        stroke-opacity: 0.5;
+        stroke-dasharray: 100;
+        animation: dash 2s alternate-reverse infinite;
+    }
+    .shadows {
+        position: absolute;
+        width: 100%;
+        animation-name: rotation;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        z-index: -1;
+        .wrap_shadows {
+            position: relative;
+            .shadow1 {
+                position: absolute;
+                margin-top: -10%;
+                margin-left: 0;
+                z-index: -1;
+                box-shadow: 0 0 47px 37px #f0bd93;
+            }
+            .shadow2 {
+                position: absolute;
+                margin-top: 10%;
+                margin-left: 0;
+                z-index: -1;
+                box-shadow: 0 0 47px 37px #e98194;
+            }
+            .shadow1, .shadow2 {
+                transform: scale(1.2);
+            }
+        }
+        
+    }
+    .text {
+        width: 100%;   
+        svg {
+            width: 70%;
+        } 
+    }
+    .logo {
+        svg {
+            width: 70%;
+            animation-name: respiration;
+            animation-duration: 10s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite
+        }
+    }
+    @keyframes dash {
+        0% {
+            stroke: #f1bf94;
+            /* stroke-dasharray: 100; */
+            stroke-dashoffset: 500;
+        }
+        35% {
+            stroke: #e97f99;
+        }
+        70%{
+            stroke: #e6599b;
+        }
+        100% {
+            stroke: #f1bf94;
+        }
+    }
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        35% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0.5;
+            transform: rotate(-200deg);
+        }
+        65% {
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    @keyframes respiration {
+        0% {
+            transform: scale(1) rotate(0);
+        }
+        50% {
+            transform: scale(1.05) rotate(5deg);
+        }
+        100% {
+            transform: scale(1) rotate(0);
+        }
+    }
+    @if x <= 400px {
+        .wrap_shadows  {
+            transform: scale(1);
+        }
+    }
+    @if x <= 350px {
+        .wrap_shadows  {
+            transform: scale(0.9);
+        }
+    }
+    @if x <= 300px {
+        .wrap_shadows  {
+            transform: scale(0.6);
+        }
+    }
+}
