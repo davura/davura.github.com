@@ -3,7 +3,7 @@ d={
     style:true,
     data:{
         sidebar:[],
-        add: "", // new capsula name
+        add: "", // new component name
         current: "",
         new_name: "",
         add_resize: false,
@@ -174,7 +174,7 @@ c = {
                 this.update(); // update and run
 
             } else {
-                alert(`Alredy exist capsula ${this.add}`);
+                alert(`Alredy exist component ${this.add}`);
             }
             this.close_add();
         },
@@ -229,7 +229,7 @@ c = {
             if (this.in_rename) return;
             
             if (this.list[this.new_name]) {
-                return alert(`Alredy exist capsula ${this.new_name}`);
+                return alert(`Alredy exist component ${this.new_name}`);
             }
             
             this.in_rename = true;
@@ -267,18 +267,15 @@ c = {
             code+=`\n       <title> LAB </title>`;
             code+=`\n       <style>`;
             code+=`\n               html,body{height: 100%;width: 100%;margin: 0;}`;
-            code+=`\n               *, *:before, *:after{-webkit-box-sizing: inherit;box-sizing: inherit;}`;
-            code+=`\n               html{-webkit-box-sizing: border-box;box-sizing: border-box;}`;
-            code+=`\n               div, *[cap-id]{display:block;}`;
             code+=`\n               *{font-family:sans-serif;}`;
             code+=`\n       </style>`;
-            code+=`\n       <link c-import="`;
+            code+=`\n       <link d-import="`;
             code+=`         ${cimport}`;
             code+=`\n       ">`;
             code+=`\n</head>`;
             code+=`\n<body>`;
             code+=`\n       <app #app></app>`;
-            code+=`\n       <script src="./capsula.min.js"></script>`;
+            code+=`\n       <script src="./davura.min.js"></script>`;
             code+=`\n</body>`;
             code+=`\n</html>`;
             return code;

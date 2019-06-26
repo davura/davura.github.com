@@ -1,7 +1,7 @@
 <div class="wrap_add cover center" #wrap_add>
     <div class="add_cap window" #window_add>
         <div class="add_title">
-            ADD CAPSULA
+            ADD COMPONENT
         </div>
         <div class="add_content">
             <input type="text" placeholder="NAME" value="this.add" #input_add onkeypress="event.key === 'Enter' && this.add_cap()">
@@ -13,7 +13,7 @@
     </div>
     <div class="rename_cap window" #window_rename>
         <div class="add_title">
-            RENAME CAPSULA
+            RENAME COMPONENT
         </div>
         <h3>Rename {{this.current}} for:</h3>
         <input type="text" placeholder="NAME" value="this.new_name" #input_rename onkeypress="event.key === 'Enter' && this.rename()">
