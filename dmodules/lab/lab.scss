@@ -329,6 +329,10 @@ this {
             box-shadow: var(--shadow2);
             padding-bottom: 60px;
             display: none;
+            pre {
+                margin: 0;
+                display: flex;
+            }
             .buttons {
                 height: 60px;
                 position: absolute;
@@ -343,7 +347,7 @@ this {
             padding-left: 0;
         }
         .lab_sidebar {
-            left: - $sidebar_width !important;
+            left: -$sidebar_width !important;
             box-shadow: var(--shadow2);
         }
         .lab_sidebar.open {
