@@ -490,7 +490,7 @@ lang.microsass = /* html */`
 `;
 lang.microsass_1 = /* html */`
     <p>
-        The components are usually started with <i>this{}</i> through the Davura client, <i>this</i> refers to the current component, in this way the properties will only be applied to the current component and to the current component. children components.
+        The components are usually started with <i>this{}</i> through the Davura client, <i>this</i> refers to the current component, in this way the properties will only be applied to the current component and to the children components.
     </p>
 `;
 lang.prependdav_appenddav = /* html */`
