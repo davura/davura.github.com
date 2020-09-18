@@ -15,7 +15,7 @@ lang.doc_source_1 = /*html*/ `
 `;
 lang.get_started_1 = /*html*/ `
     <p>
-        Davura es una librería / framework desarrollado para la creación de web-component que es compilado automáticamente dentro del navegador o puede ser compilado por completo en un unico archivo. Davura puede ayudar al desarrollo de aplicaciones o sitios webs SPA de una manera más sencilla.
+        Davura es una librería / framework experimental desarrollada para la creación de web-component que es compilado automáticamente dentro del navegador o puede ser compilado por completo en un unico archivo. Davura puede ayudar al desarrollo de aplicaciones o sitios webs SPA de una manera más sencilla.
     </p>
 `;
 lang.get_started_2 = /* html */`
