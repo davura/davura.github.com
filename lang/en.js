@@ -5,8 +5,8 @@ lang.example = "Example";
 lang.functions = "Functions";
 lang.download = "Download";
 lang.source = "Source";
-lang.compressed = "Compressed";
-lang.production = "Production";
+lang.compressed = "Production";
+lang.production = "Development";
 lang.doc_source = "Documentation source";
 lang.doc_source_1 = /*html*/ `
     <p>
